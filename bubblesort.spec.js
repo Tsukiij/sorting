@@ -1,23 +1,23 @@
 describe("Bubble Sort", function() {
-  beforeAll(function() {
-    spyOn(window, "swap").and.callThrough();
-  });
-  it("the number of swaps to sort an array is a fractorial of the array length less 1", function() {
-    // let r;
-    // function factorial(num) {
-    //   var result = num;
-    //   if (num === 0 || num === 1) return 1;
-    //   while (num > 1) {
-    //     num--;
-    //     result *= num;
-    //   }
-    //   return result;
-    // }
-    // let swap1 = factorial(r.length - 1);
+  // beforeAll(function() {
+  //   spyOn(window, "swap").and.callThrough();
+  // });
+  // it("the number of swaps to sort an array is a fractorial of the array length less 1", function() {
+  // let r;
+  // function factorial(num) {
+  //   var result = num;
+  //   if (num === 0 || num === 1) return 1;
+  //   while (num > 1) {
+  //     num--;
+  //     result *= num;
+  //   }
+  //   return result;
+  // }
+  // let swap1 = factorial(r.length - 1);
 
-    // bubbleSort(r);
-    expect(window.swap.calls.count()).toEqual(28);
-  });
+  // bubbleSort(r);
+  //   expect(window.swap.calls.count()).toEqual(28);
+  // });
 
   it("handles an empty array", function() {
     expect(bubbleSort([])).toEqual([]);

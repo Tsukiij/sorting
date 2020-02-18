@@ -7,14 +7,24 @@ function split(wholeArray) {
   return [firstHalf, secondHalf];
 }
 
-function mergeSort(array) {
-  let p = 0;
-  let r = array.length;
-  let [left, right] = split(array);
-  if (left.length === 1 && right.length === 1) {
-    console.log(left, right);
-    return left[0] < right[0] ? [left[0], right[0]] : [right[0], left[0]];
-  } else {
-    return mergeSort(left).concat(mergeSort(right));
+function merge(left, right) {
+  let arr = [];
+
+  while (left.length && right.length) {
+    if (left[0] < right[0]) {
+      arr.push(left.shift());
+    } else {
+      arr.push(right.shift());
+    }
   }
+  return arr.concat(left.slice().concat(right.slice()));
+}
+
+function mergeSort(arr) {
+  if (arr.length < 2) {
+    return arr;
+  }
+
+  const [left, right] = split(arr);
+  return merge(mergeSort(left), mergeSort(right));
 }

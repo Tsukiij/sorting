@@ -20,6 +20,28 @@ describe("Split Array function", function() {
 describe("Merge function", function() {
   it("is able to merge two sorted arrays into one sorted array", function() {
     // test the merging algorithm
-    expect(mergeSort([5, 2, 8, 6, 1, 7, 4])).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+    expect(mergeSort([5, 2, 6, 1, 8, 7, 4, 3])).toEqual([
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]);
+
+    expect(mergeSort([9, 2, 5, 6, 4, 3, 7, 10, 1, 8])).toEqual([
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]);
   });
 });
